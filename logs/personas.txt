@@ -14,4 +14,4 @@ her selection of seats if she decides to back out.
 Manager: Rick is the venue manager. He wants to be able to see how many seats are sold for his venues show. Rick wants 
 to know the percentage of the total seats that have been sold along with the total payout he can expect from the seats sold. 
 He wants to know if 50% of the tickets have not been sold, in which case the show will not take place. The system should be able to
- tell rick whether he should go on with the show based on percentage of seats sold.
+tell rick whether he should go on with the show based on percentage of seats sold.
