@@ -1,0 +1,25 @@
+Stories:
+
+Joe: As a last minute customer Joe wants to see all available seats when selecting h
+is seat so he will get the best seat still available. 
+
+Joe: As a younger guy who is broke Joe wants to see the price of any seat selected so 
+he gets a good deal.
+
+Joe: As a forgetful guy Joe wants to see his seat number along with total price in a 
+confirmation after purchasing so he gets the right seat. 
+
+Emily: As the organizer for her group of friends Emily wants to add multiple seats to 
+her cart so her checkout is simpler.
+
+Emily: As the organizer for her group Emily wants to be able to remove one of the seats 
+so she doesn't waste her money when one of her friends bail.
+
+Rick: As the manager of the venue Rick wants to see all seats sold so he can kick out 
+anyone who sneaks in. 
+
+Rick: As the manager of the venue Rick wants to view a percentage of the seats sold 
+easily so he can decide whether or not to cancel the show
+ 
+Rick: As the manager of the venue Rick wants to view the total made from the sales of 
+the seats so he can make plans for future events.
