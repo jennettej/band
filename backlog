@@ -1,0 +1,24 @@
+Backlog:
+"x" = completed
+
+X- design a text based UI for seat layout, including the gap between rows 13 and 14
+X- Create a text file for storing data on seats sold
+X- update the UI when a seat is sold
+On the UI display the pricing of a seat when selected.
+Update the UI when a seat is in the cart
+Modify the text file to store pricing data
+Create seat price function
+Create a UI for the shopping Cart
+Create “cart” class for the shopping cart including
+Adding items to the cart
+Clearing the whole cart
+Create checkout
+Create in_cart function
+Create a main file for adjusting the UI
+Create a function to check if a seat is sold
+Create a function that prevents a sold seat from being selected.
+Create a Checkout UI to display seats selected and total price.
+Create a sales class for seats sales including seats sold and venue occupancy
+Create a managers view to view venue occupancy
+Create a login for the managers view
+Create a refund function to refund all purchases and clear the seats sold
