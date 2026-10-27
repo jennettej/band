@@ -1,0 +1,29 @@
+Personas: 
+
+Name: Jerry
+Age: 65
+Role: Customer
+Goals: Purchase tickets for his family
+Frustrations: Complex & unintuitive systems, slow load times
+Behaviors: Changes his mind often, leaves tabs open, uses desktop
+
+-
+
+Name: Dana
+Age: 21
+Role: Customer
+Goals: Purchase single ticket for her friend as a gift
+Frustrations: Having to 'go the long route' to share/send a ticket
+(needs simplicity),
+Behaviors: Uses mobile browser, prefers easy to read UI 
+
+-
+
+Name: Connor
+Age: 35
+Role: Manager
+Goals: View sales, Stay organized for the venue
+Frustrations: Lack of integration with other tools, hard to read UI, 
+slow functionality, fragile systems
+Behaviors: Repeated checking, likes quick summaries of information,
+prioritizes fast & efficient solutions. Uses mobile and desktop
