@@ -18,7 +18,14 @@ def load_unavailable_seats(filepath: str) -> dict:
     return unavailable_seats
 
 def load_selected_seats(selected_seats: list) -> dict:
-    """Reads selected seats from a cart class file into a dictionary."""
+    """
+    Converts a list of selected seats from the cart class into a dictionary for easy lookup.
+    Keys are seat identifiers and values are True.
+    """
+    selected_seats_dict = {}
+    for seat in selected_seats:
+        selected_seats_dict[seat.upper()] = True
+    return selected_seats_dict
 
 def print_seating_chart(unavailable_seats: dict, selected_seats: dict) -> None:
     """Prints a 10x10 seating chart, replacing unavailable seats with an "X"."""
@@ -43,7 +50,3 @@ def print_seating_chart(unavailable_seats: dict, selected_seats: dict) -> None:
                 
         print()
 
-
-if __name__ == "__main__":
-    booked_seats = load_unavailable_seats("booked_seats.txt")
-    print_seating_chart(booked_seats)
