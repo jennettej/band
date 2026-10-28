@@ -1,16 +1,12 @@
-# Checks the pricing of selected seats based on their location in the seating chart.
-#Front row seats are $9 for A row seats
-#B through I seats are $8
-#J row seats are $7
-
-def check_seat_pricing(seat: str) -> int:
-    """Returns the price of a seat based on its row."""
-    row = seat[0].upper()
+Base_Price = 8 #Variable so the base price can easily be adjusted if necessary
+def check_seat_pricing(seat, base = Base_Price):
+    """Returns the price of a seat."""
+    row = seat.strip().upper()[0] #Takes the row letter off of the front of the seat label
     if row == "A":
-        return 9
-    elif row in "BCDEFGHI":
-        return 8
+        return base + 1
     elif row == "J":
-        return 7
+        return base - 1
+    elif "B" <= row <= "I":
+        return base
     else:
-        raise ValueError(f"Invalid seat: {seat}")
+        raise ValueError("Invalid Row. Must be between A and J.")

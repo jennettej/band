@@ -1,7 +1,9 @@
-from Interface import print_seating_chart, load_unavailable_seats, load_selected_seats
+from Interface import print_seating_chart
+from utilities.load_unavailable_seats import load_unavailable_seats
+from utilities.load_selected_seats import load_selected_seats
 
 booked_seats = load_unavailable_seats("booked_seats.txt")
-from cart import Cart
+from models.cart import Cart
 cart = Cart()
 selected_seats = load_selected_seats(cart.cart_items())
 #first render seating chart print

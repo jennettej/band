@@ -1,4 +1,4 @@
-from check_seat_pricing import check_seat_pricing
+from utilities.check_seat_pricing import check_seat_pricing
 
 
 def get_total_seats_sold():

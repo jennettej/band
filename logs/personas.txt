@@ -1,17 +1,29 @@
-Personas:
+Personas: 
 
-Ticket Buyer: Joe is going to a concert by himself and wants to buy a ticket. Joe needs to be able to see available 
-seats in a grid formation (letter/number), he needs to select a seat and see the seat he selected. He needs to be able to 
-see the price of the seats available along with a confirmation to pay for the seat he selected.
+Name: Jerry
+Age: 65
+Role: Customer
+Goals: Purchase tickets for his family
+Frustrations: Complex & unintuitive systems, slow load times
+Behaviors: Changes his mind often, leaves tabs open, uses desktop
 
+-
 
-Ticket Buyer: Emily is going to a concert with a group; she needs to be able to see available seats in a 
-grid like UI text interface. She is buying multiple tickets, so she needs to be able to select multiple seats 
-and see the individual prices for the seats as well as the total price of all selected seats. She wants to be able to clear 
-her selection of seats if she decides to back out.
+Name: Dana
+Age: 21
+Role: Customer
+Goals: Purchase single ticket for her friend as a gift
+Frustrations: Having to 'go the long route' to share/send a ticket
+(needs simplicity),
+Behaviors: Uses mobile browser, prefers easy to read UI 
 
+-
 
-Manager: Rick is the venue manager. He wants to be able to see how many seats are sold for his venues show. Rick wants 
-to know the percentage of the total seats that have been sold along with the total payout he can expect from the seats sold. 
-He wants to know if 50% of the tickets have not been sold, in which case the show will not take place. The system should be able to
-tell rick whether he should go on with the show based on percentage of seats sold.
+Name: Connor
+Age: 35
+Role: Manager
+Goals: View sales, Stay organized for the venue
+Frustrations: Lack of integration with other tools, hard to read UI, 
+slow functionality, fragile systems
+Behaviors: Repeated checking, likes quick summaries of information,
+prioritizes fast & efficient solutions. Uses mobile and desktop
