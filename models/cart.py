@@ -16,7 +16,7 @@ class Cart:
         self.items.append(item)
 
         #Check if the seat is already booked
-        with open("booked_seats.txt", "r") as file:
+        with open("data/booked_seats.txt", "r") as file:
             booked_seats = [line.strip().upper() for line in file]
         if item.upper() in booked_seats:
             print(f"Seat {item} is already booked.")
@@ -27,9 +27,9 @@ class Cart:
         self.items = []
 
     def checkout(self) -> None:
-        """Write to booked_seats.txt and call the clear_cart if write was successful"""
+        """Write to data/booked_seats.txt and call the clear_cart if write was successful"""
         try:
-            with open("booked_seats.txt", "a") as file:
+            with open("data/booked_seats.txt", "a") as file:
                 for item in self.items:
                     file.write(f"{item.upper()}\n")
             self.clear_cart()

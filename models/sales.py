@@ -5,7 +5,7 @@ def get_total_seats_sold():
     """returns the total number of seats sold."""
 
     #reads all booked seats from the file
-    with open("booked_seats.txt", "r") as file:
+    with open("data/booked_seats.txt", "r") as file:
         seats = file.readlines()
 
     #each line represents one booked seat
@@ -28,7 +28,7 @@ def get_total_revenue():
     total = 0
 
     #goes through each booked seat and adds its price to the total
-    with open("booked_seats.txt", "r") as file:
+    with open("data/booked_seats.txt", "r") as file:
         for seat in file:
             row = seat.strip()[0]
 
