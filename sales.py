@@ -30,7 +30,7 @@ def get_total_revenue():
     #goes through each booked seat and adds its price to the total
     with open("booked_seats.txt", "r") as file:
         for seat in file:
-            row = seat.strip()[0]
+            row = seat.strip().upper()[0]
 
             #gets the price based on the row and adds it to revenue
             total += check_seat_pricing(row)
