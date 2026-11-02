@@ -18,8 +18,8 @@ def get_fill_percentage():
     total_seats = 260
     seats_sold = get_total_seats_sold()
 
-    #divides seats sold by total seats to gets the percentage
-    return (seats_sold / total_seats) * 100
+    #divides seats sold by total seats to gets the percentage then rounds it to 2 decimal places
+    return round((seats_sold / total_seats) * 100, 2)
 
 
 def get_total_revenue():
@@ -30,9 +30,11 @@ def get_total_revenue():
     #goes through each booked seat and adds its price to the total
     with open("data/booked_seats.txt", "r") as file:
         for seat in file:
-            row = seat.strip()[0]
+            seat = seat.strip().upper()
 
-            #gets the price based on the row and adds it to revenue
-            total += check_seat_pricing(row)
+            #only calculates the price if the seat is not empty
+            if seat:
+                row = seat[0]
+                total += check_seat_pricing(row)
 
     return total
