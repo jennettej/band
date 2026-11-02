@@ -1,3 +1,4 @@
+from models.sales import get_total_seats_sold, get_total_revenue, get_fill_percentage
 from utilities.seat_chart import print_seating_chart
 from utilities.load_unavailable_seats import load_unavailable_seats
 from utilities.load_selected_seats import load_selected_seats
@@ -10,10 +11,12 @@ cart = Cart()
 selected_seats = load_selected_seats(cart.cart_items())
 #first render seating chart print
 print_seating_chart(booked_seats, selected_seats)
-
 # Main loop for user interaction
+# prompt to enter the managers view. Prompt only shown once
+print("To enter the managers view, enter the password")
 while True:
-    action = input("Enter 'add' to add a seat, 'remove' to remove a seat from the cart, 'checkout' to checkout, or 'quit' to exit: ").strip().lower()
+    action = input("Enter: 'add' to add a seat to the cart, 'remove' to remove a seat from the cart,"
+                   "\n'checkout' to checkout, or 'quit' to exit: ").strip().lower()
     #Let's print out selected seats for the user if they have any from the cart class
     if cart.cart_items():
         print("Selected seats:", ", ".join(cart.cart_items()))
@@ -38,6 +41,12 @@ while True:
         # if the seat is not found reprompt the user
         elif seat not in selected_seats:
             print("Invalid seat. Please try again.")
+
+    #Accessing the managers view
+    elif action == "password123": #Temporary password for testing
+        print("percent of seats sold :",get_fill_percentage())
+        print("amount of seats sold  :", get_total_seats_sold())
+        print("revenue from the seats:", get_total_revenue())
 
     elif action == "checkout":
         #Call the checkout method to write to booked_seats.txt and clear the cart
