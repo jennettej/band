@@ -13,7 +13,7 @@ print_seating_chart(booked_seats, selected_seats)
 
 # Main loop for user interaction
 while True:
-    action = input("Enter 'add' to add a seat, 'checkout' to checkout, or 'quit' to exit: ").strip().lower()
+    action = input("Enter 'add' to add a seat, 'remove' to remove a seat from the cart, 'checkout' to checkout, or 'quit' to exit: ").strip().lower()
     #Let's print out selected seats for the user if they have any from the cart class
     if cart.cart_items():
         print("Selected seats:", ", ".join(cart.cart_items()))
@@ -25,6 +25,20 @@ while True:
         #Call load selected_seats and print_seating_chart to update the seating chart after adding a seat
         selected_seats = load_selected_seats(cart.cart_items())
         print_seating_chart(booked_seats, selected_seats)
+
+    #user wants to remove a seat from the cart
+    if action == "remove":
+        seat = input("Enter the seat to remove (e.g., A0): ").strip().upper()
+        #check if the seat selected is in the cart
+        if seat in selected_seats:
+            print("Removing seat:", seat)
+            cart.remove_item(seat)
+            selected_seats = load_selected_seats(cart.cart_items())
+            print_seating_chart(booked_seats, selected_seats)
+        # if the seat is not found reprompt the user
+        elif seat not in selected_seats:
+            print("Invalid seat. Please try again.")
+
     elif action == "checkout":
         #Call the checkout method to write to booked_seats.txt and clear the cart
         cart.checkout()
