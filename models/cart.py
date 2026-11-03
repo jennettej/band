@@ -18,7 +18,7 @@ class Cart:
         self.items.append(item)
         self.total_price += price
 
-    def remove_item(self, item: str) -> None:
+    def remove_item(self, item: str, price: float) -> None:
         """Removes seat from cart.items"""
         if item in self.items:
             self.items.remove(item)
