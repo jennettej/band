@@ -2,20 +2,23 @@ class Cart:
     """Represents a shopping cart for seat selection."""
     def __init__(self):
         self.items = []
+        self.total_price = 0.0
 
     def cart_items(self) -> list:
         """Returns a list of items in the cart."""
         return self.items
     
-    def add_item(self, item: str) -> None:
+    def add_item(self, item: str, price: float) -> None:
         """Adds seat to cart.items"""
         #First check if the seat is already in the cart 
         if item in self.items:
             print(f"Seat {item} is already in the cart.")
             return
+        
         self.items.append(item)
+        self.total_price += price
 
-    def remove_item(self, item: str) -> None:
+    def remove_item(self, item: str, price: float) -> None:
         """Removes seat from cart.items"""
         if item in self.items:
             self.items.remove(item)
@@ -27,6 +30,7 @@ class Cart:
         if item.upper() in booked_seats:
             print(f"Seat {item} is already booked.")
             self.items.remove(item)
+            self.total_price -= price
 
     def clear_cart(self) -> None:
         """Clears all items from the cart."""
