@@ -18,6 +18,12 @@ class Cart:
         self.items.append(item)
         self.total_price += price
 
+    def remove_item(self, item: str) -> None:
+        """Removes seat from cart.items"""
+        if item in self.items:
+            self.items.remove(item)
+
+
         #Check if the seat is already booked
         with open("data/booked_seats.txt", "r") as file:
             booked_seats = [line.strip().upper() for line in file]
