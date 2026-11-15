@@ -15,7 +15,7 @@ def get_total_seats_sold():
 def get_fill_percentage():
     """calculates the percentage of seats that have been sold."""
 
-    total_seats = 260
+    total_seats = 240
     seats_sold = get_total_seats_sold()
 
     #divides seats sold by total seats to gets the percentage then rounds it to 2 decimal places
