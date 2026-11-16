@@ -44,12 +44,12 @@ while True:
 
     #Accessing the managers view
     elif action == "password123": #Temporary password for testing
-        print("percent of seats sold :",get_fill_percentage())
-        print("amount of seats sold  :", get_total_seats_sold())
-        print("revenue from the seats:", get_total_revenue())
+        print("percent of seats sold :",get_fill_percentage(), "%")
+        print("amount of seats sold  :", get_total_seats_sold(), "seats")
+        print("revenue from the seats:", get_total_revenue(), "$")
 
     elif action == "checkout":
-        #Call the checkout method to write to booked_seats.txt and clear the cart
+        #Call the checkout method to write to booked_seats.txt and clear the casrt
         cart.checkout()
         #After checkout, reload the booked seats and selected seats, then print the updated seating chart
         booked_seats = load_unavailable_seats("data/booked_seats.txt")

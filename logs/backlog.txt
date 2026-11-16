@@ -22,3 +22,13 @@ Create a sales class for seats sales including seats sold and venue occupancy
 X-Create a managers view to view venue occupancy
 Create a login for the managers view
 Create a refund function to refund all purchases and clear the seats sold
+
+
+- Add a 'clear' seating funcitonality that allows the user to clear all their seats instea of just quitting
+- Add cleaner breaks to the UI outputs, everything is super cramped together, maybe some line breaks in between statements and better formatting
+- Selected seats are printing out after a command in termianl 
+Current workflow is (seat is selected -> nothing is printed -> another command is typed, then seat is printed) should be
+(Seat is selected -> selected seats printed -> user types another command...)
+* Integrate seat pricing
+- Show the seat price when a user goes to select a seat
+- Show the total prices of the seats during checkout / confirm seat pricing on final checkout
