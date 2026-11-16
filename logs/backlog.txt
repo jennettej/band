@@ -29,6 +29,8 @@ Create a refund function to refund all purchases and clear the seats sold
 - Selected seats are printing out after a command in termianl 
 Current workflow is (seat is selected -> nothing is printed -> another command is typed, then seat is printed) should be
 (Seat is selected -> selected seats printed -> user types another command...)
+- Manager needs to know if show can go on, I forgot the exact specification, but it was something like "If the show is 3 hours out and the venue is under X% capacity
+then the manager needs to be able to cancel the entire show (remove all of the saved seats) - Someone needs to look into this and implement it.
 * Integrate seat pricing
 - Show the seat price when a user goes to select a seat
 - Show the total prices of the seats during checkout / confirm seat pricing on final checkout
