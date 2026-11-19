@@ -16,7 +16,7 @@ print_seating_chart(booked_seats, selected_seats)
 print("To enter the managers view, enter the password")
 while True:
     action = input("Enter: 'add' to add a seat to the cart, 'remove' to remove a seat from the cart,"
-                   "\n'checkout' to checkout, or 'quit' to exit: ").strip().lower()
+                   "\n'clear' to clear all selected seats, 'checkout' to checkout, or 'quit' to exit: ").strip().lower()
     #Let's print out selected seats for the user if they have any from the cart class
     if cart.cart_items():
         print("Selected seats:", ", ".join(cart.cart_items()))
@@ -30,7 +30,7 @@ while True:
         print_seating_chart(booked_seats, selected_seats)
 
     #user wants to remove a seat from the cart
-    if action == "remove":
+    elif action == "remove":
         seat = input("Enter the seat to remove (e.g., A0): ").strip().upper()
         #check if the seat selected is in the cart
         if seat in selected_seats:
@@ -47,6 +47,15 @@ while True:
         print("percent of seats sold :",get_fill_percentage(), "%")
         print("amount of seats sold  :", get_total_seats_sold(), "seats")
         print("revenue from the seats:", get_total_revenue(), "$")
+
+
+
+    #If the user wants to clear the cart
+    elif action == "clear":
+        cart.clear_cart()
+        selected_seats = load_selected_seats(cart.cart_items())
+        print("\nAll selected seats have been cleared.\n")
+        print_seating_chart(booked_seats, selected_seats)
 
     elif action == "checkout":
         #Call the checkout method to write to booked_seats.txt and clear the casrt
